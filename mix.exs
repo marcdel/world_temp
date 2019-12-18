@@ -24,6 +24,10 @@ defmodule WorldTemp.MixProject do
     [
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:httpoison, "~> 1.6"},
+      {:jason, "~> 1.1"},
+      {:broadway,
+       github: "plataformatec/broadway", tag: "08497708e10867935f2e92351e4cde9e4a57135e"}
     ]
   end
 end

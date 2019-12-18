@@ -4,11 +4,13 @@ defmodule WorldTemp.Application do
   @moduledoc false
 
   use Application
+  alias WorldTemp.{CityProducer, TempProcessor, TempTracker}
 
   def start(_type, _args) do
     children = [
-      # Starts a worker by calling: WorldTemp.Worker.start_link(arg)
-      # {WorldTemp.Worker, arg}
+      CityProducer,
+      TempProcessor,
+      TempTracker
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
